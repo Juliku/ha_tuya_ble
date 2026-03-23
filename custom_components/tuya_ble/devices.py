@@ -381,6 +381,10 @@ devices_database: dict[str, TuyaBLECategoryInfo] = {
                 name="Fingerprint Smart Lock",
                 lock=1,
             ),
+            "x7ltlmsv": TuyaBLEProductInfo(
+                name="Key Box",
+                lock=1,
+            ),
         },
     ),
     "dcb": TuyaBLECategoryInfo(
