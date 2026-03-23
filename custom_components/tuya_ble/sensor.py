@@ -301,6 +301,76 @@ mapping: dict[str, TuyaBLECategorySensorMapping] = {
                     ),
                 ),
             ],
+            "x7ltlmsv": [  # Key Box
+                TuyaBLEBatteryMapping(dp_id=8),
+                TuyaBLESensorMapping(
+                    dp_id=6,
+                    description=SensorEntityDescription(
+                        key="unlock_ble",
+                        icon="mdi:bluetooth",
+                        suggested_display_precision=0,
+                        entity_category=EntityCategory.DIAGNOSTIC,
+                    ),
+                ),
+                TuyaBLESensorMapping(
+                    dp_id=12,
+                    description=SensorEntityDescription(
+                        key="unlock_fingerprint",
+                        icon="mdi:fingerprint",
+                        suggested_display_precision=0,
+                        entity_category=EntityCategory.DIAGNOSTIC,
+                    ),
+                ),
+                TuyaBLESensorMapping(
+                    dp_id=13,
+                    description=SensorEntityDescription(
+                        key="unlock_password",
+                        icon="mdi:numeric-0-box-multiple-outline",
+                        suggested_display_precision=0,
+                        entity_category=EntityCategory.DIAGNOSTIC,
+                    ),
+                ),
+                TuyaBLESensorMapping(
+                    dp_id=14,
+                    description=SensorEntityDescription(
+                        key="unlock_dynamic",
+                        icon="mdi:lock-reset",
+                        suggested_display_precision=0,
+                        entity_category=EntityCategory.DIAGNOSTIC,
+                    ),
+                ),
+                TuyaBLESensorMapping(
+                    dp_id=15,
+                    description=SensorEntityDescription(
+                        key="unlock_card",
+                        icon="mdi:lock-reset",
+                        suggested_display_precision=0,
+                        entity_category=EntityCategory.DIAGNOSTIC,
+                    ),
+                ),
+                TuyaBLESensorMapping(
+                    dp_id=67,
+                    description=SensorEntityDescription(
+                        key="unlock_offline_password",
+                        icon="mdi:numeric-0-box-multiple-outline",
+                        suggested_display_precision=0,
+                        entity_category=EntityCategory.DIAGNOSTIC,
+                    ),
+                ),
+                TuyaBLESensorMapping(
+                    dp_id=21,
+                    description=SensorEntityDescription(
+                        key="alarm_lock",
+                        icon="mdi:alert",
+                        device_class=SensorDeviceClass.ENUM,
+                        options=[
+                            "wrong_finger",
+                            "wrong_password",
+                            "low_battery",
+                        ],
+                    ),
+                ),
+            ],
         }
     ),
     "jtmspro": TuyaBLECategorySensorMapping(
